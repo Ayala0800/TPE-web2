@@ -1,5 +1,3 @@
-# TPE-web2
-Trabajo Practico Especial de WEB 2
-Integrantes: Lucas Ayala - Agustina Quinteros.
-Tematica: Cerveceria.
-Descripción:
+- Integrantes : Lucas Ayala (lucasayala0800@gmail.com) - Agustina Quinteros (21agustinaa@gmail.com).
+- Temática: Cerveceria.
+- Descripción: 
