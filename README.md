@@ -1,3 +1,3 @@
 - Integrantes : Lucas Ayala (lucasayala0800@gmail.com) - Agustina Quinteros (21agustinaa@gmail.com).
 - Temática: Cerveceria.
-- Descripción: 
+- Descripción: En resumen, se diseñó un registro organizado de las cervezas disponibles, los clientes que las compran y los pedidos específicos que realizan esos clientes. Esta estructura de datos facilita el seguimiento de quién compra qué, cuándo y cuánto.
