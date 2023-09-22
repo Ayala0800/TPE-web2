@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-09-2023 a las 21:50:01
+-- Tiempo de generación: 22-09-2023 a las 17:42:13
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -40,7 +40,11 @@ CREATE TABLE `cervezas` (
 --
 
 INSERT INTO `cervezas` (`Cerveza_ID`, `Nombre`, `IBU`, `%ALC`, `Precio`) VALUES
-(1000123, 'Choco 03 Imperial Stout', 82, 7.9, 899);
+(1000123, 'Choco 03 Imperial Stout', 82, 7.9, 899),
+(1000124, 'American Pale Ale', 35, 7.9, 899),
+(1000125, 'Baguales Belgian Blonde Ale', 20, 5.5, 855),
+(1000126, 'Golden Ale', 19, 5.2, 850),
+(1000127, 'English Pale Ale', 35, 5.1, 990);
 
 -- --------------------------------------------------------
 
@@ -60,7 +64,11 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`Cliente_ID`, `Nombre y Apellido`, `Email`, `Telefono`) VALUES
-(2000123, 'Lucas Ayala', 'lucasayala@gmail.com', 1231214);
+(2000123, 'Lucas Ayala', 'lucasayala@gmail.com', 1231214),
+(2000124, 'María Rodriguez', 'mariarodriguez@gmail.com', 789445),
+(2000125, 'Diego Lopez', 'diego10@gmail.com', 9822417),
+(2000126, 'Luciana Garcia', 'lugarcia@gmail.com', 2336491),
+(2000127, 'Martin Palermo', 'titan12@gmail.com', 20062007);
 
 -- --------------------------------------------------------
 
@@ -76,6 +84,17 @@ CREATE TABLE `pedido` (
   `Cantidad` int(11) NOT NULL,
   `Precio Total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `pedido`
+--
+
+INSERT INTO `pedido` (`Pedido_ID`, `Cliente_ID`, `Cerveza_ID`, `Fecha`, `Cantidad`, `Precio Total`) VALUES
+(3000123, 2000123, 1000123, '2023-09-22', 12, 10800),
+(3000124, 2000124, 1000124, '2023-09-20', 2, 2000),
+(3000125, 2000125, 1000125, '2023-09-19', 6, 5600),
+(3000126, 2000126, 1000126, '2023-09-24', 9, 8600),
+(3000127, 2000127, 1000127, '2023-09-20', 24, 21500);
 
 --
 -- Índices para tablas volcadas
