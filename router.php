@@ -20,7 +20,7 @@ switch ($params[0]) {
     case 'home':
         $estilos = $estiloController->getEstilos();
         $cervezaController->showCervezas($estilos);
-        break; 
+        break;
 
     case 'logIn':
         $userController->showLogIn();
@@ -38,6 +38,7 @@ switch ($params[0]) {
         $userController->modifyUserRol($params[1]);
         break;
 
+    //REDIRIGE A LA PAGINA DE REGISTRO DE USUARIO
     case 'register':
         $userController->showRegister();
     break;
@@ -75,12 +76,12 @@ switch ($params[0]) {
         $estiloController->deleteEstilo($params[1]);
     break;
 
-    //REDIRIGE AL PHTML PARA EDITAR EL ESTILO QUE SE SELECCIONO
+    //REDIRIGE AL PHTML PARA EDITAR LA CATEGORIA SELECCIONADO
     case 'editEstilo':
         $estiloController->showEditEstilo($params[1]);
     break;
 
-    //ACTUALIZA LOS CAMPOS DE LOS ESTILOS EN LA BD
+    //ACTUALIZA LOS CAMPOS DE LA CATEGORIA EN LA BD
     case 'updateEstilo':
         $estiloController->updateEstilo($params[1]);
     break;
@@ -94,25 +95,26 @@ switch ($params[0]) {
         $cervezaController->showCerveza($params[1]);
         break;
 
-    //AGREGA UNA CERVEZA A LA BD
+    //AGREGA EL PRODUCTO A LA BD
     case 'addCerveza':
         $cervezaController->addCerveza();
     break;
 
-    //ELIMINA UNA CERVEZA DE LA BD
+    //ELIMINA EL PRODUCTO DE LA BD
     case 'deleteCerveza':
         $cervezaController->deleteCerveza($params[1]);
     break;
 
-    //REDIRIGE AL PHTML PARA EDITAR LA CERVEZA SELECCIONADA
+    //REDIRIGE A LA VISTA PARA EDITAR EL PRODUCTO SELECCIONADO
     case 'editCerveza':
         $estilos = $estiloController->getEstilos();
         $cervezaController->showEditCerveza($params[1], $estilos);
     break;
 
-    //ACTUALIZA LOS CAMPOS DE LA CERVEZA EN LA BD
+    //EDITA LOS CAMPOS DEL PRODUCTO EN LA DB
     case 'updateCerveza':
-        $cervezaController->updateCerveza($params[1]);
+            $cervezaController->updateCerveza($params[1]);
+            
     break;
 
     //PAGINA USUARIOS
@@ -124,7 +126,6 @@ switch ($params[0]) {
     case 'deleteUser':
         $userController->deleteUser($params[1]);
     break;
-
     default:
         echo "404 page not found";
     break;
