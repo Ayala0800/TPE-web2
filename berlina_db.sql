@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2023 a las 22:00:29
+-- Tiempo de generación: 17-10-2023 a las 16:45:28
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -91,10 +91,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `email`, `contraseña`, `rol`) VALUES
-(1, 'admin', 'admin@gmail.com', 'admin', 2),
-(3, 'agus', 'agus@gmail.com', '$2y$10$Z/5f12CN6HRP1Bt6FBACk.dg04ra2dqIShINqLiH8JTrNTN9/KyLS', 1),
-(4, 'agus', 'agustina@gmail.com', '$2y$10$TJPnEBWDlK1qSnDcy0kHa.GZly0UEZxuv1oodbMsT3UiBhLipjJ3.', 1),
-(5, 'agustinaa', 'agusss@gmail.com', '$2y$10$N9RcvEcq/FvobONquwKCcuOkA7POsXeemA1GO5./K2Yb.69u3lHHy', 1);
+(10, 'admin', 'admin@gmail.com', '$2y$10$x4oOMRTpOlKWFauBFOZ62uNixivfwQLgA4kY1q6eSLELuzGqlfg12', 2),
+(11, 'Agustina', 'agustina@gmail.com', '$2y$10$5u/7jO1jhqA0y.oezTwV8O31OXy0aAELZ4XL4WBCagIhY6TUdHQw.', 1),
+(12, 'lucas', 'lucas@gmail.com', '$2y$10$0.1e3lsnkmU9yzdXcIS5KejCeGcjCf9sGZS50FGyKBzE09rDCx9.6', 2);
 
 --
 -- Índices para tablas volcadas
@@ -138,7 +137,7 @@ ALTER TABLE `estilos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
