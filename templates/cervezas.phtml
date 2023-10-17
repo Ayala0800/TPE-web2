@@ -1,0 +1,16 @@
+<?php require_once 'templates/head.phtml'; ?>
+<div class="flexColumna">
+    <h1 id="nombreProducto" data-id="<?php echo $cerveza->id_cerveza; ?>" data-rol="<?php echo $userRol; ?>"><?php echo $cerveza->nombre; ?></h1>
+    <section>
+        <div class="detalle-producto">
+            <p><span>IBU:</span> <?php echo $cerveza->IBU; ?></p>
+            <p><span>ALCOHOL:</span><span class="porcent"> %</span> <?php echo $cerveza->ALC; ?></p>
+            <p><span>ESTILO:</span> <?php echo $cerveza->estilo; ?></p>
+            <p><span>Descripcion:</span> <?php echo $cerveza->descripcion; ?></p>
+
+        </div>
+    </section>
+</div>
+<?php require_once 'templates/footer.phtml'; ?>
+
+

@@ -1,0 +1,13 @@
+<?php require_once 'templates/head.phtml';?>
+<h1>Iniciar Sesión</h1>
+<section>
+
+    <form action="startSession" method="POST">
+        <div class="flexColumna">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="pass" placeholder="Contraseña">
+            <input type="submit" value="Iniciar Sesión" class="btnBlue">
+        </div>
+    </form>
+</section>
+<?php require_once 'templates/footer.phtml';?>

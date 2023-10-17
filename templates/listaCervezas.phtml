@@ -1,0 +1,46 @@
+<?php require_once 'templates/head.phtml';?>
+
+<div class="flexColumna">
+    <section >
+    <?php foreach ($cervezas as $cerveza){ ?>
+        <div class="cervezas" >
+            <div class="nombre" >
+                <?php echo $cerveza->nombre; ?>
+            </div>
+            <div class="info">
+                <span >Estilo: <?php echo $cerveza->estilo; ?></span>
+                <a href="cerveza/<?php echo $cerveza->id_cerveza; ?>" class="btnVerde">VER DETALLE</a>
+                <?php if ($userRol == 2){ ?>
+                    <div class="botoneraAdmin">
+                        <a href="editCerveza/<?php echo $cerveza->id_cerveza; ?>" class="btnOrange bg-warning">EDITAR</a>
+                        <a href="deleteCerveza/<?php echo $cerveza->id_cerveza; ?>" class="btnRed bg-danger">BORRAR</a>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    <?php } ?>
+    </section>
+    <?php if ($userRol == 2){ ?>
+    <section class="agregar">
+        <span class="bg-warning">Agregar producto</span>
+        <form action="addCerveza" method="POST">
+            <div class="flexWrap">
+                <input required name="nombre" placeholder="Nombre">
+                <input required type="number" name="IBU" placeholder="IBU">
+                <input required type="number" name="ALC" placeholder="%ALC">
+                <select name="id_estilo">
+                    <?php foreach ($estilos as $estilo): ?>
+                        <option value="<?php echo $estilo->id_estilo; ?>"><?php echo $estilo->nombre; ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <input required type="number" name="stock" placeholder="unidades" min="1">
+                <input required type="text" name="descripcion" placeholder="descripción">
+            </div>
+
+            <div class="flexColumna">
+                <button type="submit" class="btnVerde" value="Agregar">Añadir</button>
+            </div>
+        </form>
+    </section>
+    <?php } ?>
+<?php require_once 'templates/footer.phtml';?>
