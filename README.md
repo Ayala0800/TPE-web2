@@ -1,3 +1,3 @@
 - Integrantes : Lucas Ayala (lucasayala0800@gmail.com) - Agustina Quinteros (21agustinaa@gmail.com).
-- Temática: Cerveceria.
-- Descripción: En resumen, se diseñó un registro organizado de las cervezas disponibles, sus caracteristicas y el tipo de estilo al que pertenece cada una.
+- Temática: Cerveceria Berlina.
+- Descripción: En resumen, se diseñó un registro organizado de las cervezas disponibles (stock), sus caracteristicas y el tipo de estilo al que pertenece cada una.
