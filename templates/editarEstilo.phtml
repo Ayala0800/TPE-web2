@@ -1,0 +1,20 @@
+<?php require_once 'templates/head.phtml';?>
+
+<div class="flexColumna">
+    <?php if ($userRol == 2){ ?>
+        <section class="agregar">
+            <label for="nombre" class="bg-warning">Editar nombre de Estilo</label>
+            <form action="updateEstilo" method="POST">
+                <div class="flexWrap">
+                    <input type="text" name="id" hidden value="<?php echo $estilo->id_estilo?>">
+                    <input required name="nombre" value="<?php echo $estilo->nombre ?>">
+                </div>
+                <div class="flexColumna">
+                    <button type="submit" class="btnVerde" value="Agregar">Guardar</button>
+                </div>
+            </form>
+        </section>
+        <?php
+    }?>
+
+<?php require_once 'templates/footer.phtml';?>

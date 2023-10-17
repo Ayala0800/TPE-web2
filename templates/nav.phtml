@@ -1,0 +1,35 @@
+<nav class="flexSpaceBetween">
+    <?php if ($userRol == 2): ?>
+        <div>
+            <a class="admin" href="cervezas">CERVEZAS</a>
+            <a class="admin" href="estilos">ESTILOS</a>
+            <a class="admin" href="users">USUARIOS</a>
+        </div>
+    <?php else: ?>
+        <div>
+            <a href="cervezas">CERVEZAS</a>
+            <a href="estilos">ESTILOS</a>
+        </div>
+    <?php endif; ?>
+    
+    <?php if ($userRol == 0): ?>
+        <div>
+            <a href="logIn">INICIAR SESIÓN</a>
+            <a href="register">REGISTRARSE</a>
+        </div>
+    <?php endif; ?>
+    
+    <?php if ($userRol != 0): ?>
+        <div>
+            <?php if ($userRol == 2): ?>
+                <span class="resaltado">ADMIN</span>
+            <?php endif; ?>
+            <span class="emailUser"><?= $userEmail ?></span>
+            <?php if ($userRol == 2): ?>
+                <a href="logOut" class="admin">CERRAR SESIÓN</a>
+            <?php else: ?>
+                <a href="logOut">CERRAR SESIÓN</a>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
+</nav>

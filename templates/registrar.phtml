@@ -1,0 +1,13 @@
+<?php require_once 'templates/head.phtml';?>
+<h1>Registrar Usuario</h1>
+
+<form action="addUser" method="POST">
+    <div class="flexColumna">
+        <input type="text" name="nombre" placeholder="Nombre">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="pass" placeholder="Contraseña">
+        <input type="submit" value="Registrarse" class="btnGreen">
+    </div>
+</form>
+
+<?php require_once 'templates/footer.phtml';?>

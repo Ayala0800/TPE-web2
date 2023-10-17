@@ -1,0 +1,32 @@
+<?php require_once 'templates/head.phtml';?>
+
+<div class="flexColumna">
+    <section class="tableEstilos">
+    <?php foreach ($estilos as $estilo) { ?>
+        <div class="estilo">
+            <?php echo $estilo->nombre; ?>
+            <div class="estilos">
+                <a href="estilo/<?php echo $estilo->id_estilo; ?>" class="btnBlue">VER CERVEZAS</a>
+                <?php if ($userRol == 2) { ?>
+                    <a href="editEstilo/<?php echo $estilo->id_estilo; ?>" class="btnOrange bg-warning">EDITAR</a>
+                    <a href="deleteEstilo/<?php echo $estilo->id_estilo; ?>" class="btnRed bg-danger">BORRAR</a>
+                <?php } ?>
+            </div>
+        </div>
+    <?php } ?>
+    </section>
+    <?php if ($userRol == 2) { ?>
+        <h3>*SOLO SE PODRÁ ELIMINAR UNA CATEGORÍA SI NO TIENE PRODUCTOS ASOCIADOS</h5>
+        <section class="agregar">
+        <div class="flexColumna bg-primary">
+            <span>Agregar nuevo estilo de cerveza:</span>
+            <form action="addEstilo" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <input type="submit" class="btnGreen" value="Agregar">
+            </form>
+        </div>
+        </section>
+    <?php } ?>
+</div>
+
+<?php require_once 'templates/footer.phtml';?>
